@@ -13,6 +13,9 @@
   }
 
   & .information-container{
+    & .content-information{
+      background: linear-gradient(329deg, rgba(165,215,225,1) 7%, rgba(254,205,114,1) 18%, rgba(255,255,255,1) 32%);
+    }
     & .info-details{
       width:130px;
     }
