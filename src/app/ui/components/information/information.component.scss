@@ -1,26 +1,28 @@
 @import '../../../platform/themes/global.scss';
 
 .section-container{
-  height: 48vh;
-
-  & .home-container{
-    position: relative;
-    top: -220px;
-
-    & .home-content{
-      margin-left: 150px;
+  height: 90vh;
+ & .div-section-container{
+    height: 45vh;
+    background-image: url('../../../../assets/imgs/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    & .home-container{
+      & .home-content{
+        margin-left: 150px;
+      }
     }
-  }
 
-  & .information-container{
-    & .content-information{
-      background: linear-gradient(329deg, rgba(165,215,225,1) 7%, rgba(254,205,114,1) 18%, rgba(255,255,255,1) 32%);
-    }
-    & .info-details{
-      width:130px;
-    }
-    & strong{
-      color: #FE9200;
+    & .information-container{
+      & .content-information{
+        background: linear-gradient(329deg, rgba(165,215,225,1) 7%, rgba(254,205,114,1) 18%, rgba(255,255,255,1) 32%);
+      }
+      & .info-details{
+        width:130px;
+      }
+      & strong{
+        color: #FE9200;
+      }
     }
   }
 }
