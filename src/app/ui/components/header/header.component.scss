@@ -1,0 +1,18 @@
+@import '../../../platform/themes/global.scss';
+
+header{
+
+  & .header-tittle{
+    font-family: $Montserrat-font;
+  }
+
+  & .general-p1{
+    font-family: $Verdana-font;
+  }
+}
+
+.content-nav{
+  position: fixed;
+  width: 70px;
+  z-index: 1;
+}

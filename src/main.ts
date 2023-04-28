@@ -1,7 +1,27 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { importProvidersFrom } from '@angular/core';
+import { AppComponent } from './app/app.component';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { Routes, provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
 
-import { AppModule } from './app/app.module';
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/objective',
+    pathMatch: 'full'
+  },
+  /**Lazyloading component */
+  {
+    path: 'objective',
+    loadComponent: () => import('./app/ui/pages/objective/objective.component').then(mod => mod.ObjectiveComponent)
+  }
+]
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+    providers: [
+      importProvidersFrom(BrowserModule),
+      provideRouter(routes),
+      provideHttpClient()
+    ]
+})
   .catch(err => console.error(err));
