@@ -1,0 +1,18 @@
+<section class="section-cards-container mt-5">
+  <div class="d-flex justify-content-around">
+    <div *ngFor="let item of cardList$ | async">
+      <div class="m-1 text-start mb-4">
+        <p class="m-0 fw-bold">{{item.nameProduct}}</p>
+        <p class="m-0">{{item.numberProduct}}</p>
+      </div>
+      <div class="m-1 text-start mb-4">
+        <p class="m-0 fw-bold">Ya cuentas con:</p>
+        <p class="m-0 text-success">{{item.balanceProduct}}</p>
+      </div>
+      <div class="m-1 mb-4">
+        <img src="../../../../assets/icons/Happy.svg" alt="happy">
+        <p class="m-0 mt-2">{{item.detaildProduct}}</p>
+      </div>
+    </div>
+  </div>
+</section>

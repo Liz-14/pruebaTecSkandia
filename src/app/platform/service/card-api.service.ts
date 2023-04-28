@@ -1,8 +1,8 @@
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.development';
-import { CardList } from '../../domain/interfaces/card.interface';
+import { Card, CardList } from '../../domain/interfaces/card.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +14,9 @@ export class CardApiService {
 
   constructor() { }
 
-  getCardResponse (): Observable<CardList>{
+  getCardResponse (): Observable<Card[]>{
     return this.httpClient
     .get<CardList>(this.url)
-    .pipe()
+    .pipe(map((response: CardList) => response.listCard))
   }
 }

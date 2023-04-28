@@ -11,8 +11,10 @@ header{
   }
 }
 
-.content-nav{
-  position: fixed;
+.container-nav{
+  position: absolute;
+  height: 98vh;
   width: 70px;
   z-index: 1;
+
 }

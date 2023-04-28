@@ -1,10 +1,8 @@
-import { CardList } from '../../../domain/interfaces/card.interface';
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardApiService } from '../../../platform/service/card-api.service';
-import { Observable } from 'rxjs';
 import { HeaderComponent } from '../../components/header/header.component';
 import { InformationComponent } from '../../components/information/information.component';
+import { CardsComponent } from '../../components/cards/cards.component';
 
 @Component({
   selector: 'app-objective',
@@ -12,17 +10,12 @@ import { InformationComponent } from '../../components/information/information.c
   imports: [
     CommonModule,
     HeaderComponent,
-    InformationComponent
+    InformationComponent,
+    CardsComponent
   ],
   templateUrl: './objective.component.html',
   styleUrls: ['./objective.component.scss']
 })
 export class ObjectiveComponent {
 
-  private readonly cardApiSvc = inject(CardApiService);
-  cardList$!: Observable<CardList>;
-
-  constructor() {
-    this.cardList$ = this.cardApiSvc.getCardResponse();
-  }
 }
