@@ -13,9 +13,18 @@ import { Observable } from 'rxjs';
 })
 export class CardsComponent {
   private readonly cardApiSvc = inject(CardApiService);
+  /**
+   * Observable que almacenara los datos que se mostraran en las cards
+   */
   cardList$!: Observable<Card[]>;
 
+  /**
+   * Constructor del componente
+   */
   constructor() {
+    /**
+     * Llamado la servicio y asignacion de datos a variable
+     */
     this.cardList$ = this.cardApiSvc.getCardResponse();
   }
 }

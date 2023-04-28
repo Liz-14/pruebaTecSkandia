@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-//import { NgSwitch, NgSwitchDefault, NgSwitchCase } from '@angular/common';
 
 @Component({
     selector: 'app-root',

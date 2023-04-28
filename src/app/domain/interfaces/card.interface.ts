@@ -1,3 +1,6 @@
+/**
+ * Detalle de las card
+ */
 export interface Card {
   nameProduct: string;
   numberProduct: string;
@@ -5,6 +8,9 @@ export interface Card {
   detaildProduct: string;
 }
 
+/**
+ * Datos de la respuesta del servicio
+ */
 export interface CardList {
   listCard: Card[];
 }

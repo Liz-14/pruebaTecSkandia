@@ -13,7 +13,10 @@ export class CardApiService {
   private url = environment.objectiveApiUrl;
 
   constructor() { }
-
+  /**
+   * Peticion GET al la API
+   * @returns Respuesta del servicio - información de las card
+   */
   getCardResponse (): Observable<Card[]>{
     return this.httpClient
     .get<CardList>(this.url)

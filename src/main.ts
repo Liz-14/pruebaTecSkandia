@@ -4,6 +4,7 @@ import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { Routes, provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 
+/**Array que almacena las rutas del proyecto */
 const routes: Routes = [
   {
     path: '',
