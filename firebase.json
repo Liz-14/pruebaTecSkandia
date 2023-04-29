@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "test-skandia",
+    "public": "dist/prueba-tec-skandia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
